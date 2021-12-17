@@ -1,2 +1,2 @@
 # superalex
-Alex Bobes ersion of Super Mario
+Alex Bobes version of Super Mario - Play or die
