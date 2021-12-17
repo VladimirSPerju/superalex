@@ -10,7 +10,7 @@ kaboom({
 
 // Speed identifiers
 const MOVE_SPEED = 120
-const JUMP_FORCE = 600
+const JUMP_FORCE = 450
 const BIG_JUMP_FORCE = 550
 let CURRENT_JUMP_FORCE = JUMP_FORCE
 const FALL_DEATH = 400
@@ -33,6 +33,7 @@ loadSprite('pipe-top-left', 'ReTPiWY.png')
 loadSprite('pipe-top-right', 'hj2GK4n.png')
 loadSprite('pipe-bottom-left', 'c1cYSbt.png')
 loadSprite('pipe-bottom-right', 'nqQ79eI.png')
+loadSprite('bobes', '6yEKDIj.png')
 
 loadSprite('blue-block', 'fVscIbn.png')
 loadSprite('blue-brick', '3e5YRQd.png')
@@ -223,8 +224,15 @@ scene("game", ({ level, score }) => {
   })
 })
 
+
+
+
 scene('lose', ({ score }) => {
-  add([sprite('mario'),text("WHY NO WORK?"), origin('center'), pos(width()/2, height()/ 2)])
+  // add([sprite('mario'),text("WHY NO WORK?"), origin('center'), pos(width()/2, height()/ 2)])
+  add([text("WHY NO WORK?"), origin('center'), pos(width()/2, height()/ 2)]);
+  add([sprite('bobes'), origin('center'), pos(width()/2, height()/ 5)]);
+  
+
 })
 
 start("game", { level: 0, score: 0})
